@@ -39,13 +39,17 @@ function needToSubtract(currentValue, lastchar){
 function romanNumberalConverter(roman) {
   var sum = 0;
   var lastchar = '';
-  for (var i = roman.length - 1; i >= 0; i--) {
-    sum += nextValue(roman[i], lastchar);
-    lastchar = roman[i];
-  }
+//   for (var i = roman.length - 1; i >= 0; i--) {
+//     sum += nextValue(roman[i], lastchar);
+//     lastchar = roman[i];
+//   }
+//   return sum;
+// }
+  roman.split('').reverse().forEach(function(x){sum += nextValue(x, lastchar);
+  lastchar = x;});
   return sum;
 }
 
-
+romanNumberalConverter("XXXVIII");
 
 module.exports = romanNumberalConverter;
