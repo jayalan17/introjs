@@ -1,7 +1,7 @@
 var assert = require('chai').assert;
 var fizzBuzz = require('./fizzBuzz');
 
-describe("FizzBuzz", function() {
+xdescribe("FizzBuzz", function() {
   it("can convert 1 to 1", function() {
     //Arrange
     var expected = "1";
